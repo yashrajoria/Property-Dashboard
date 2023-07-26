@@ -69,7 +69,8 @@ const AllProperties = () => {
                         />
                         <TextField
                             sx={{
-                                backgroundColor: "green",
+                                backgroundColor: "#475be8",
+                                borderColor: "black",
                             }}
                             variant="outlined"
                             color="info"
@@ -79,7 +80,7 @@ const AllProperties = () => {
                         />
                         <Select
                             sx={{
-                                backgroundColor: "green",
+                                backgroundColor: "#475be8",
                             }}
                             variant="outlined"
                             color="info"

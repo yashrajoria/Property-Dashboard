@@ -42,7 +42,7 @@ const PropertyCard = ({
                 <Stack direction="column"
                     gap={1}
                 >
-                    <Typography fontSize={16} fontWeight={500}>{title}</Typography>
+                    <Typography fontSize={16} fontWeight={500} color="black">{title}</Typography>
                     <Stack direction="row" gap={0.5} alignItems="flex-start">
                         <Place
                             sx={{
@@ -50,11 +50,11 @@ const PropertyCard = ({
                                 color: '#11142d',
                                 marginTop: '0.5'
                             }} />
-                        <Typography fontSize={14} fontWeight={500}>{location}</Typography>
+                        <Typography fontSize={14} fontWeight={500} color="black">{location}</Typography>
                     </Stack>
 
                 </Stack>
-                <Box px={1.5} py={0.5} bgcolor="#dadefa">
+                <Box px={1.5} py={0.5}>
                     <Typography sx={{
                         color: "#475be8",
                         fontWeight: "bold",
