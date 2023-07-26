@@ -48,6 +48,7 @@ const Form = ({
                                 fontSize: 16,
                                 color: "#11142d",
                             }}
+
                         >
                             Enter property name
                         </FormHelperText>
@@ -58,6 +59,9 @@ const Form = ({
                             color="info"
                             fontcolor="black"
                             variant="outlined"
+                            style={{
+                                color: "green"
+                            }}
                             {...register("title", { required: true })}
                         />
                     </FormControl>
@@ -84,7 +88,7 @@ const Form = ({
                                 borderColor: "rgba(0,0,0,0.23)",
                                 borderRadius: 6,
                                 padding: 10,
-                                color: "#919191",
+                                color: "black"
                             }}
                             {...register("description", { required: true })}
                         />
@@ -99,23 +103,28 @@ const Form = ({
                                     fontSize: 16,
                                     color: "#11142d",
                                 }}
+
                             >
                                 Select Property Type
                             </FormHelperText>
                             <Select
                                 variant="outlined"
-                                color="info"
+                                color="secondary"
                                 displayEmpty
                                 required
                                 inputProps={{ "aria-label": "Without label" }}
                                 defaultValue="apartment"
+                                style={{
+                                    color: "black",
+                                    border: "1px solid black"
+                                }}
                                 {...register("propertyType", {
                                     required: true,
                                 })}
                             >
                                 <MenuItem value="apartment">Apartment</MenuItem>
                                 <MenuItem value="villa">Villa</MenuItem>
-                                <MenuItem value="farmhouse">farmhouse</MenuItem>
+                                <MenuItem value="farmhouse">Farmhouse</MenuItem>
                                 <MenuItem value="condos">Condos</MenuItem>
                                 <MenuItem value="townhouse">Townhouse</MenuItem>
                                 <MenuItem value="duplex">Duplex</MenuItem>
@@ -141,6 +150,10 @@ const Form = ({
                                 color="info"
                                 type="number"
                                 variant="outlined"
+                                style={{
+                                    color: "black",
+                                    backgroundColor: "grey"
+                                }}
                                 {...register("price", { required: true })}
                             />
                         </FormControl>
@@ -163,6 +176,10 @@ const Form = ({
                             id="outlined-basic"
                             color="info"
                             variant="outlined"
+                            style={{
+                                color: "black",
+                                backgroundColor: "grey"
+                            }}
                             {...register("location", { required: true })}
                         />
                     </FormControl>

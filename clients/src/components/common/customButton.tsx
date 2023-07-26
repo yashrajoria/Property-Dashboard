@@ -33,8 +33,8 @@ const customButton = ({
             }}
             onClick={handleClick}
         >
-            title={title}
-            icon={icon}
+            {title}
+            {icon}
         </Button>
     );
 };
