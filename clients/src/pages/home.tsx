@@ -15,8 +15,7 @@ const Home = () => {
         }
     })
 
-    const latestProperties = data?.data ?? {};
-    console.log(latestProperties)
+    const latestProperties = data?.data ?? [];
 
     if (isLoading)
         return <Typography>Loading...</Typography>
@@ -69,7 +68,7 @@ const Home = () => {
                 flex={1}
                 borderRadius="15px"
                 padding="20px"
-                bgcolor="beige"
+                bgcolor="#fcfcfc"
                 display="flex"
                 flexDirection="column"
                 minWidth="100%"
@@ -85,7 +84,7 @@ const Home = () => {
                 <Box mt={2.5} sx={{
                     display: "flex", flexWrap: 'wrap', gap: 4
                 }}>
-                    {/* {latestProperties.map((property) => {
+                    {latestProperties.map((property) => (
                         <PropertyCard
                             key={property._id}
                             id={property._id}
@@ -94,7 +93,7 @@ const Home = () => {
                             price={property.price}
                             photo={property.photo}
                         />
-                    })} */}
+                    ))}
 
 
                 </Box>
