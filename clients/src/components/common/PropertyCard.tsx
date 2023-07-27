@@ -9,11 +9,12 @@ const PropertyCard = ({
     return (
         <Card
             component={Link}
-            to={`/properties/${id}`}
+            to={`/properties/show/${id}`}
             sx={{
                 maxWidth: '330px',
                 textDecoration: 'none',
                 padding: '10px',
+                bgcolor: 'white',
                 '&:hover ': {
                     boxShadow: '0 22px 45px 2px rgba (176,176,176,0.1)'
                 },
@@ -54,11 +55,12 @@ const PropertyCard = ({
                     </Stack>
 
                 </Stack>
-                <Box px={1.5} py={0.5}>
+                <Box px={1.5} py={0.5} bgcolor="#dadefa"
+                    height="fit-content" borderRadius={1}>
                     <Typography sx={{
                         color: "#475be8",
                         fontWeight: "bold",
-                        fontSize: "12px"
+                        fontSize: "12px",
                     }}>₹ {price}</Typography>
                 </Box>
             </CardContent>

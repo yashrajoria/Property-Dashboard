@@ -56,10 +56,16 @@ const getPropertyDetail = async (req, res) => {
     "creator"
   );
 
-  if (propertyExists) {
-    res.status(200).json(propertyExists);
-  } else {
-    res.status(404).json({ message: "Property not found" });
+  try {
+    if (propertyExists) {
+      res.status(200).json(propertyExists);
+    } else {
+      res.status(404).json({ message: "Property not found" });
+    }
+  } catch (error) {
+    // Handle the error in case something goes wrong
+    console.log(error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };
 
